@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
 
+    @IBOutlet var answer:UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        answer?.text = "Shake to find the answer"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == UIEventSubtype.MotionShake {
+            answer?.text = "Thinking.."
+        }
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == UIEventSubtype.MotionShake {
+            answer?.text = pickRandomAnswer()
+        }
+    }
 }
-

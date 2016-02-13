@@ -13,6 +13,8 @@
 		9A8A952A1C6F478900DB80AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8A95291C6F478900DB80AA /* Assets.xcassets */; };
 		9A8A952D1C6F478900DB80AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8A952B1C6F478900DB80AA /* LaunchScreen.storyboard */; };
 		9A8A95381C6F478900DB80AA /* Dev8BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A95371C6F478900DB80AA /* Dev8BallTests.swift */; };
+		9A8A95431C6F4B9600DB80AA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8A95421C6F4B9600DB80AA /* CoreMotion.framework */; };
+		9A8A95451C6F4CB100DB80AA /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A95441C6F4CB100DB80AA /* Answers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9A8A95331C6F478900DB80AA /* Dev8BallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dev8BallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8A95371C6F478900DB80AA /* Dev8BallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dev8BallTests.swift; sourceTree = "<group>"; };
 		9A8A95391C6F478900DB80AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8A95421C6F4B9600DB80AA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9A8A95441C6F4CB100DB80AA /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8A95431C6F4B9600DB80AA /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		9A8A95161C6F478800DB80AA = {
 			isa = PBXGroup;
 			children = (
+				9A8A95421C6F4B9600DB80AA /* CoreMotion.framework */,
 				9A8A95211C6F478800DB80AA /* Dev8Ball */,
 				9A8A95361C6F478900DB80AA /* Dev8BallTests */,
 				9A8A95201C6F478800DB80AA /* Products */,
@@ -79,6 +85,7 @@
 			children = (
 				9A8A95221C6F478800DB80AA /* AppDelegate.swift */,
 				9A8A95241C6F478800DB80AA /* ViewController.swift */,
+				9A8A95441C6F4CB100DB80AA /* Answers.swift */,
 				9A8A95261C6F478900DB80AA /* Main.storyboard */,
 				9A8A95291C6F478900DB80AA /* Assets.xcassets */,
 				9A8A952B1C6F478900DB80AA /* LaunchScreen.storyboard */,
@@ -146,6 +153,7 @@
 				TargetAttributes = {
 					9A8A951E1C6F478800DB80AA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 79GK225UV2;
 					};
 					9A8A95321C6F478900DB80AA = {
 						CreatedOnToolsVersion = 7.2;
@@ -199,6 +207,7 @@
 			files = (
 				9A8A95251C6F478800DB80AA /* ViewController.swift in Sources */,
 				9A8A95231C6F478800DB80AA /* AppDelegate.swift in Sources */,
+				9A8A95451C6F4CB100DB80AA /* Answers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Dev8Ball/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ROM.Dev8Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +348,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Dev8Ball/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ROM.Dev8Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +401,7 @@
 				9A8A953E1C6F478900DB80AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A8A953F1C6F478900DB80AA /* Build configuration list for PBXNativeTarget "Dev8BallTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +410,7 @@
 				9A8A95411C6F478900DB80AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
